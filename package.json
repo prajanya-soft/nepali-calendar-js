@@ -1,8 +1,14 @@
 {
-  "name": "untilted",
-  "version": "0.0.0",
+  "name": "nepali-calendar-js",
+  "version": "1.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "nepal",
+    "nepali",
+    "calendar",
+    "nepali-date",
+    "nepali-calendar"
+  ],
   "private": true,
   "author": "your-username",
   "license": "MIT",
@@ -37,12 +43,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/untilted.git"
+    "url": "git+https://github.com/sapkotamadhusudan/nepali-calendar-js.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/untilted/issues"
+    "url": "https://github.com/sapkotamadhusudan/nepali-calendar-js/issues"
   },
-  "homepage": "https://github.com/your-username/untilted#readme",
+  "homepage": "https://github.com/sapkotamadhusudan/nepali-calendar-js#readme",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
