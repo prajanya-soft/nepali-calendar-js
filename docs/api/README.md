@@ -1,32 +1,23 @@
-untilted
+nepali-calendar-js
 
-# untilted
+# nepali-calendar-js
 
 ## Table of contents
 
-### Functions
+### Enumerations
 
-- [demo](README.md#demo)
+- [DayOfWeek](enums/DayOfWeek.md)
+- [LocalDateType](enums/LocalDateType.md)
+- [Month](enums/Month.md)
 
-## Functions
+### Classes
 
-### demo
-
-▸ **demo**(): `void`
-
-Demo function for template repository
-
-**`remarks`**
-Read more about TSDoc at: [https://github.com/microsoft/tsdoc](https://github.com/microsoft/tsdoc)
-
-**`beta`**
-
-#### Returns
-
-`void`
-
-Nothing!
-
-#### Defined in
-
-[index.ts:12](https://github.com/ivandotv/microbundle-template/blob/56ba4dd/src/index.ts#L12)
+- [ADLocalDate](classes/ADLocalDate.md)
+- [BSLocalDate](classes/BSLocalDate.md)
+- [DayOfWeekHelper](classes/DayOfWeekHelper.md)
+- [Formatter](classes/Formatter.md)
+- [ILocalDate](classes/ILocalDate.md)
+- [MathHelper](classes/MathHelper.md)
+- [MonthHelper](classes/MonthHelper.md)
+- [Period](classes/Period.md)
+- [Utils](classes/Utils.md)
