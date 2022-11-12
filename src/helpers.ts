@@ -71,8 +71,9 @@ export class MonthHelper {
    */
   static plus(months: number, month: Month): Month {
     const amount = months % 12
+    const ordinal = month.valueOf() - 1
 
-    return MonthHelper.ENUMS[(month.valueOf() + (amount + 12)) % 12]
+    return MonthHelper.ENUMS[(ordinal + (amount + 12)) % 12]
   }
 
   /**
@@ -173,8 +174,9 @@ export class DayOfWeekHelper {
    */
   static plus(days: number, dayOfWeek: DayOfWeek): DayOfWeek {
     const amount = days % 7
+    const ordinal = dayOfWeek.valueOf()
 
-    return DayOfWeekHelper.ENUMS[(dayOfWeek.valueOf() + (amount + 7)) % 7]
+    return DayOfWeekHelper.ENUMS[(ordinal + (amount + 7)) % 7]
   }
 
   /**
