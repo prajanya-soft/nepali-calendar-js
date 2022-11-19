@@ -97,17 +97,24 @@ export class MonthHelper {
 
 export class DayOfWeekHelper {
   /**
+   * Private mapping of all the dayOfWeek constants.
+   */
+  private static ENUMS_RECORD: Record<DayOfWeek, number> = {
+    [DayOfWeek.MONDAY]: 1,
+    [DayOfWeek.TUESDAY]: 2,
+    [DayOfWeek.WEDNESDAY]: 3,
+    [DayOfWeek.THURSDAY]: 4,
+    [DayOfWeek.FRIDAY]: 5,
+    [DayOfWeek.SATURDAY]: 6,
+    [DayOfWeek.SUNDAY]: 7
+  }
+
+  /**
    * Private cache of all the constants.
    */
-  private static ENUMS = [
-    DayOfWeek.MONDAY,
-    DayOfWeek.TUESDAY,
-    DayOfWeek.THURSDAY,
-    DayOfWeek.WEDNESDAY,
-    DayOfWeek.FRIDAY,
-    DayOfWeek.SATURDAY,
-    DayOfWeek.SUNDAY
-  ]
+  private static ENUMS: DayOfWeek[] = Object.keys(
+    DayOfWeekHelper.ENUMS_RECORD
+  ) as DayOfWeek[]
 
   /**
    * Obtains an instance of `DayOfWeek` from an `int` value.
@@ -137,13 +144,28 @@ export class DayOfWeekHelper {
     // Only necessary if firstDayOfWeek != DayOfWeek.MONDAY which has ordinal 0.
     if (firstDayOfWeek != DayOfWeek.MONDAY) {
       const lastWeekDayValue =
-        daysOfWeek.at(daysOfWeek.length - 1)?.valueOf() ?? 6
-      const rhs = daysOfWeek.slice(firstDayOfWeek.valueOf(), lastWeekDayValue)
-      const lhs = daysOfWeek.slice(0, firstDayOfWeek.valueOf())
+        daysOfWeek.at(daysOfWeek.length - 1) ?? DayOfWeek.SATURDAY
+      const rhs = daysOfWeek.slice(
+        DayOfWeekHelper.ordinal(firstDayOfWeek),
+        DayOfWeekHelper.ordinal(lastWeekDayValue)
+      )
+      const lhs = daysOfWeek.slice(0, DayOfWeekHelper.ordinal(firstDayOfWeek))
       daysOfWeek = [...rhs, ...lhs]
     }
 
     return daysOfWeek
+  }
+
+  /**
+   * Gets the day-of-week `int` value.
+   *
+   *
+   * The values are numbered from 0 (Monday) to 6 (Sunday).
+   *
+   * @return the day-of-week, from 0 (Monday) to 6 (Sunday)
+   */
+  static ordinal(dayOfWeek: DayOfWeek): number {
+    return DayOfWeekHelper.ENUMS_RECORD[dayOfWeek] - 1
   }
 
   /**
@@ -155,7 +177,7 @@ export class DayOfWeekHelper {
    * @return the day-of-week, from 1 (Monday) to 7 (Sunday)
    */
   static valueOf(dayOfWeek: DayOfWeek): number {
-    return dayOfWeek.valueOf() + 1
+    return DayOfWeekHelper.ENUMS_RECORD[dayOfWeek]
   }
 
   /**
@@ -174,7 +196,7 @@ export class DayOfWeekHelper {
    */
   static plus(days: number, dayOfWeek: DayOfWeek): DayOfWeek {
     const amount = days % 7
-    const ordinal = dayOfWeek.valueOf()
+    const ordinal = DayOfWeekHelper.ordinal(dayOfWeek)
 
     return DayOfWeekHelper.ENUMS[(ordinal + (amount + 7)) % 7]
   }

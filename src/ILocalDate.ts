@@ -125,7 +125,7 @@ export abstract class ILocalDate {
     const firstDayOfWeek = DayOfWeek.SUNDAY
     const daysSinceReferenceDate = this.daysSinceReferenceDate
 
-    const weekOfMonthValue = firstDayOfWeek.valueOf() - 1
+    const weekOfMonthValue = DayOfWeekHelper.ordinal(firstDayOfWeek)
     let dayOfWeek
 
     if (daysSinceReferenceDate > 0) {
@@ -136,6 +136,10 @@ export abstract class ILocalDate {
     }
 
     return DayOfWeekHelper.of(dayOfWeek + 1)
+  }
+
+  get dayOfWeekValue(): number {
+    return DayOfWeekHelper.valueOf(this.dayOfWeek)
   }
 
   protected constructor(year: number, month: Month, dayOfMonth: number) {

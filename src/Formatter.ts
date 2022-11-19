@@ -2,7 +2,6 @@ import { DayOfWeek } from './DayOfWeek'
 import { Month } from './Month'
 import type { ILocalDate } from './ILocalDate'
 import { LocalDateType } from './types'
-import { DayOfWeekHelper } from './helpers'
 
 class Formatter {
   private static npNumberChars: Record<number, string> = {
@@ -46,6 +45,18 @@ class Formatter {
     10: 'माघ',
     11: 'फाल्गुन',
     12: 'चैत्र'
+  }
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  private static _npWeekDays: Record<number, string> = {
+    1: 'सोमबार',
+    2: 'मंगलबार',
+    3: 'बुधबार',
+    4: 'बिहिबार',
+    5: 'शुक्रबार',
+    6: 'शनिबार',
+    7: 'आइतबार'
   }
 
   private static npWeekDays: Record<DayOfWeek, string> = {
@@ -93,9 +104,8 @@ class Formatter {
     if (type == LocalDateType.BS) {
       name = Formatter.npWeekDays[dayOfWeek]
     } else {
-      name = DayOfWeekHelper.weekName(dayOfWeek).toLowerCase()
-      name =
-        name.substring(0, 1).toUpperCase() + name.substring(1, name.length - 1)
+      name = DayOfWeek[dayOfWeek].toString().toLowerCase()
+      name = name.substring(0, 1).toUpperCase() + name.substring(1, name.length)
     }
 
     return short ? name.substring(0, 3) : name
@@ -104,7 +114,7 @@ class Formatter {
   static getNpCharacter(number: number, prefix = ''): string {
     if (number >= 10) {
       return Formatter.getNpCharacter(
-        number / 10,
+        Math.trunc(number / 10),
         Formatter.getNpCharacter(number % 10) + prefix
       )
     }

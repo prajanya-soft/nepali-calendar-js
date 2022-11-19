@@ -97,10 +97,12 @@ class Period {
     }
 
     const startDayOfWeek = earlyDate.dayOfWeek
-    const dom = DayOfWeekHelper.minus(
-      startDayOfWeek.valueOf(),
-      firstDayOfWeek
-    ).valueOf()
+    const dom = DayOfWeekHelper.valueOf(
+      DayOfWeekHelper.minus(
+        DayOfWeekHelper.valueOf(startDayOfWeek),
+        firstDayOfWeek
+      )
+    )
     let count = 0
     if (dom > 0) {
       count++
