@@ -128,15 +128,15 @@ describe('ILocalDate', () => {
 
   test(`AD Date Formatter`, () => {
     const date = ILocalDate.ofAD(2021, 1, 1)
-    // expect(Formatter.format(date, 'd')).toStrictEqual('01')
-    // expect(Formatter.format(date, 'MMM')).toStrictEqual('Jan')
-    // expect(Formatter.format(date, 'MMMM')).toStrictEqual('January')
-    // expect(Formatter.format(date, 'EEE')).toStrictEqual('Fri')
-    // expect(Formatter.format(date, 'EEEE')).toStrictEqual('Friday')
+    expect(Formatter.format(date, 'd')).toStrictEqual('01')
+    expect(Formatter.format(date, 'MMM')).toStrictEqual('Jan')
+    expect(Formatter.format(date, 'MMMM')).toStrictEqual('January')
+    expect(Formatter.format(date, 'EEE')).toStrictEqual('Fri')
+    expect(Formatter.format(date, 'EEEE')).toStrictEqual('Friday')
     expect(Formatter.format(date, 'yyyy-MM-dd')).toStrictEqual('2021-01-01')
-    // expect(
-    //   Formatter.format(date, 'yyyy-MM-dd', LocalDateType.BS)
-    // ).toStrictEqual('२०२१-०१-०१')
+    expect(
+      Formatter.format(date, 'yyyy-MM-dd', LocalDateType.BS)
+    ).toStrictEqual('२०२१-०१-०१')
   })
 
   test('Convert ILocaleDate.of', () => {

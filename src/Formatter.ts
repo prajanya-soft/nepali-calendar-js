@@ -143,7 +143,7 @@ class Formatter {
     type?: LocalDateType
   ): string {
     return pattern.replace(
-      RegExp('yyyy|MMMM|MMM|MM|EEEE|EEE|dd|d|hh|HH|mm|ss|a'),
+      /yyyy|MMMM|MMM|MM|EEEE|EEE|dd|d|hh|HH|mm|ss|a/g,
       (matched) => {
         const formatType = type ?? date.type
         switch (matched) {
