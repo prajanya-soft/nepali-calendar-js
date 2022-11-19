@@ -12,6 +12,7 @@
 
 - [minus](DayOfWeekHelper.md#minus)
 - [of](DayOfWeekHelper.md#of)
+- [ordinal](DayOfWeekHelper.md#ordinal)
 - [plus](DayOfWeekHelper.md#plus)
 - [valueOf](DayOfWeekHelper.md#valueof)
 - [weekDays](DayOfWeekHelper.md#weekdays)
@@ -55,6 +56,22 @@ ___
 #### Returns
 
 [`DayOfWeek`](../enums/DayOfWeek.md)
+
+___
+
+### ordinal
+
+▸ `Static` **ordinal**(`dayOfWeek`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dayOfWeek` | [`DayOfWeek`](../enums/DayOfWeek.md) |
+
+#### Returns
+
+`number`
 
 ___
 

@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types.ts:2](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/types.ts#L2)
+[types.ts:2](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/types.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types.ts:3](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/types.ts#L3)
+[types.ts:3](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/types.ts#L3)

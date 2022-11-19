@@ -24,6 +24,7 @@
 - [day](BSLocalDate.md#day)
 - [dayOfMonth](BSLocalDate.md#dayofmonth)
 - [dayOfWeek](BSLocalDate.md#dayofweek)
+- [dayOfWeekValue](BSLocalDate.md#dayofweekvalue)
 - [dayOfYear](BSLocalDate.md#dayofyear)
 - [daysSinceReferenceDate](BSLocalDate.md#dayssincereferencedate)
 - [lengthOfMonth](BSLocalDate.md#lengthofmonth)
@@ -98,7 +99,7 @@ ILocalDate.constructor
 
 #### Defined in
 
-[ILocalDate.ts:892](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/ILocalDate.ts#L892)
+[ILocalDate.ts:896](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L896)
 
 ___
 
@@ -108,7 +109,7 @@ ___
 
 #### Defined in
 
-[ILocalDate.ts:788](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/ILocalDate.ts#L788)
+[ILocalDate.ts:792](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L792)
 
 ## Accessors
 
@@ -151,6 +152,20 @@ ___
 #### Inherited from
 
 ILocalDate.dayOfWeek
+
+___
+
+### dayOfWeekValue
+
+• `get` **dayOfWeekValue**(): `number`
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+ILocalDate.dayOfWeekValue
 
 ___
 

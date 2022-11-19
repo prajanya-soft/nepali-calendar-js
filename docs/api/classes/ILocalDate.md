@@ -21,6 +21,7 @@
 - [day](ILocalDate.md#day)
 - [dayOfMonth](ILocalDate.md#dayofmonth)
 - [dayOfWeek](ILocalDate.md#dayofweek)
+- [dayOfWeekValue](ILocalDate.md#dayofweekvalue)
 - [dayOfYear](ILocalDate.md#dayofyear)
 - [daysSinceReferenceDate](ILocalDate.md#dayssincereferencedate)
 - [lengthOfMonth](ILocalDate.md#lengthofmonth)
@@ -69,7 +70,7 @@
 
 #### Defined in
 
-[ILocalDate.ts:39](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/ILocalDate.ts#L39)
+[ILocalDate.ts:39](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L39)
 
 ## Accessors
 
@@ -100,6 +101,16 @@ ___
 #### Returns
 
 [`DayOfWeek`](../enums/DayOfWeek.md)
+
+___
+
+### dayOfWeekValue
+
+• `get` **dayOfWeekValue**(): `number`
+
+#### Returns
+
+`number`
 
 ___
 

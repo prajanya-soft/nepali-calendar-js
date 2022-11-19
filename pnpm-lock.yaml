@@ -26,7 +26,7 @@ specifiers:
   microbundle: ^0.15.0
   prettier: ^2.6.2
   shx: ^0.3.4
-  typedoc: ^0.23.0
+  typedoc: ^0.23.1
   typedoc-plugin-markdown: ^3.12.1
   typescript: ^4.7.3
   zx: ^6.2.5

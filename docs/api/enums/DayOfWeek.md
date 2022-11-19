@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[DayOfWeek.ts:30](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L30)
+[DayOfWeek.ts:30](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L30)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:6](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L6)
+[DayOfWeek.ts:6](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L6)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:36](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L36)
+[DayOfWeek.ts:36](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L36)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:42](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L42)
+[DayOfWeek.ts:42](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L42)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:24](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L24)
+[DayOfWeek.ts:24](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:12](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L12)
+[DayOfWeek.ts:12](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L12)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:18](https://github.com/prajanya-tech/nepali-calendar-js/blob/e146cd0/src/DayOfWeek.ts#L18)
+[DayOfWeek.ts:18](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L18)

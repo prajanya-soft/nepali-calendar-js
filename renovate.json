@@ -2,7 +2,7 @@
   "extends": ["config:base", "schedule:earlyMondays"],
   "rangeStrategy": "replace",
   "labels": ["dependencies"],
-  "timezone": "Europe/Amsterdam",
+  "timezone": "Asia/Kathmandu",
   "ignoreDeps": [],
   "packageRules": [
     {
