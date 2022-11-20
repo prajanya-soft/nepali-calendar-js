@@ -83,14 +83,21 @@ class Formatter {
     return ''
   }
 
-  static monthCharacter(month: Month, type: LocalDateType): string {
+  static monthCharacter(
+    month: Month,
+    type: LocalDateType,
+    short = false
+  ): string {
     if (type == LocalDateType.AD) {
-      return month.valueOf().toString().padStart(2, '0')
+      const monthValue = month.valueOf().toString()
+
+      return short ? monthValue : monthValue.padStart(2, '0')
     } else {
-      return Formatter.getNpCharacter(month.valueOf()).padStart(
-        2,
-        Formatter.npNumberChars[0] ?? ' '
-      )
+      const monthValue = Formatter.getNpCharacter(month.valueOf())
+
+      return short
+        ? monthValue
+        : monthValue.padStart(2, Formatter.npNumberChars[0] ?? ' ')
     }
   }
 
@@ -143,10 +150,11 @@ class Formatter {
     type?: LocalDateType
   ): string {
     return pattern.replace(
-      /yyyy|MMMM|MMM|MM|EEEE|EEE|dd|d|hh|HH|mm|ss|a/g,
+      /YYYY|yyyy|MMMM|MMM|MM|M|EEEE|EEE|dd|d|hh|HH|mm|ss|a/g,
       (matched) => {
         const formatType = type ?? date.type
         switch (matched) {
+          case 'YYYY':
           case 'yyyy':
             return Formatter.yearName(date.year, formatType)
           case 'MMMM':
@@ -155,6 +163,8 @@ class Formatter {
             return Formatter.monthName(date.month, formatType, true)
           case 'MM':
             return Formatter.monthCharacter(date.month, formatType)
+          case 'M':
+            return Formatter.monthCharacter(date.month, formatType, true)
           case 'EEEE':
             return Formatter.weekDayName(date.dayOfWeek, formatType, false)
           case 'EEE':

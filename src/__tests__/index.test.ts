@@ -157,9 +157,26 @@ describe('ILocalDate', () => {
     expect(Formatter.format(date, 'EEE')).toStrictEqual('Fri')
     expect(Formatter.format(date, 'EEEE')).toStrictEqual('Friday')
     expect(Formatter.format(date, 'yyyy-MM-dd')).toStrictEqual('2021-01-01')
+    expect(Formatter.format(date, 'yyyy-M-dd')).toStrictEqual('2021-1-01')
     expect(
       Formatter.format(date, 'yyyy-MM-dd', LocalDateType.BS)
     ).toStrictEqual('२०२१-०१-०१')
+  })
+
+  test(`BS Date format`, () => {
+    const date = ILocalDate.ofBS(2021, 1, 32)
+    expect(date.format('d')).toStrictEqual('३२')
+    expect(date.reverse().format('d', LocalDateType.AD)).toStrictEqual('14')
+    // expect(date.format('MMM')).toStrictEqual('बैशाख')
+    // expect(date.format('MMMM')).toStrictEqual('बैशाख')
+    // expect(date.format('EEE')).toStrictEqual('बुध')
+    // expect(date.format('EEEE')).toStrictEqual('बुधबार')
+    // expect(date.format('yyyy-MM-dd')).toStrictEqual('२०७८-०१-०१')
+    // expect(date.format( 'yyyy-MM-dd')).toStrictEqual('2021-01-01')
+    // // expect(date.format( 'yyyy-M-dd')).toStrictEqual('2021-1-01')
+    // expect(
+    //   date.format('yyyy-MM-dd', LocalDateType.AD)
+    // ).toStrictEqual('2078-01-01')
   })
 
   test('Convert ILocaleDate.of', () => {

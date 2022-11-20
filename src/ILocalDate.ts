@@ -654,6 +654,10 @@ export abstract class ILocalDate {
     }
   }
 
+  format(pattern: string, type?: LocalDateType): string {
+    return Formatter.format(this, pattern, type ?? this.type)
+  }
+
   static convert(date: ILocalDate, type: LocalDateType): ILocalDate {
     if (date.type == type) return date
 
