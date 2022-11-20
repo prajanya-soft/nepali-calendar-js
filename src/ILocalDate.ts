@@ -119,7 +119,7 @@ export abstract class ILocalDate {
    * Returns the day of week, taking account of the weekOfMonth.
    * <p>
    * This returns the day of week of current day.
-   * For example, a day placed in Sunday would return 0.
+   * For example, a day placed in Sunday would return DayOfWeek.SUNDAY.
    */
   get dayOfWeek(): DayOfWeek {
     const firstDayOfWeek = DayOfWeek.SUNDAY
@@ -138,8 +138,16 @@ export abstract class ILocalDate {
     return DayOfWeekHelper.of(dayOfWeek + 1)
   }
 
+  /**
+   * Returns the day of week, taking account of the weekOfMonth.
+   * <p>
+   * This returns the day of week of current day.
+   * For example, a day placed in Sunday would return 0.
+   */
   get dayOfWeekValue(): number {
-    return DayOfWeekHelper.valueOf(this.dayOfWeek)
+    const dow = DayOfWeekHelper.valueOf(this.dayOfWeek)
+
+    return dow === 7 ? 0 : dow
   }
 
   protected constructor(year: number, month: Month, dayOfMonth: number) {
@@ -573,6 +581,8 @@ export abstract class ILocalDate {
   }
 
   private instance(year: number, month: Month, dayOfMonth: number): ILocalDate {
+    Utils.validateDate(year, month, dayOfMonth, this.type)
+
     return this.type == LocalDateType.AD
       ? new ADLocalDate(year, month, dayOfMonth)
       : new BSLocalDate(year, month, dayOfMonth)
@@ -609,16 +619,22 @@ export abstract class ILocalDate {
     dayOfMonth = 1,
     type: LocalDateType = LocalDateType.BS
   ): ILocalDate {
+    Utils.validateDate(year, month, dayOfMonth, type)
+
     return type == LocalDateType.BS
       ? ILocalDate.ofBS(year, month, dayOfMonth)
       : ILocalDate.ofAD(year, month, dayOfMonth)
   }
 
   static ofBS(year: number, month = 1, dayOfMonth = 1): ILocalDate {
+    Utils.validateDate(year, month, dayOfMonth, LocalDateType.BS)
+
     return new BSLocalDate(year, MonthHelper.valueOf(month), dayOfMonth)
   }
 
   static ofAD(year: number, month = 1, dayOfMonth = 1): ILocalDate {
+    Utils.validateDate(year, month, dayOfMonth, LocalDateType.AD)
+
     return new ADLocalDate(year, MonthHelper.valueOf(month), dayOfMonth)
   }
 

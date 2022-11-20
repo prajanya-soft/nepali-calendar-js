@@ -3,8 +3,9 @@ import { LocalDateType } from './types'
 import { DayOfWeek } from './DayOfWeek'
 import { DayOfWeekHelper } from './helpers'
 
-import { ADLocalDate, BSLocalDate } from './ILocalDate'
 import type { ILocalDate } from './ILocalDate'
+import { ADLocalDate, BSLocalDate } from './ILocalDate'
+import { InvalidDayOfMonth, InvalidMonth } from './errors'
 
 class Utils {
   static isLeapYear(year: number, type: LocalDateType): boolean {
@@ -52,6 +53,31 @@ class Utils {
         type == LocalDateType.BS ? Utils.monthDaysBS(year) : Utils.monthDaysAD()
 
       return monthDays[month.valueOf() - 1]
+    }
+  }
+
+  /**
+   *
+   * @param year  the year to represent, from MIN_YEAR to MAX_YEAR
+   * @param month  the month-of-year to represent, not null
+   * @param dayOfMonth  the day-of-month to represent, valid for year-month, from 1 to 31
+   * @param type the type to represent, AD or BS date type
+   * @throws Error if provided dates are invalid
+   */
+  static validateDate(
+    year: number,
+    month: Month,
+    dayOfMonth: number,
+    type: LocalDateType
+  ): void {
+    if (month < Month.JANUARY_BAISHAK || month > Month.DECEMBER_CHAITRA) {
+      throw new InvalidMonth(month)
+    }
+
+    const _lengthOfMonth = Utils.lengthOfMonth(year, month, type)
+
+    if (dayOfMonth < 1 || dayOfMonth > _lengthOfMonth) {
+      throw new InvalidDayOfMonth(dayOfMonth)
     }
   }
 }

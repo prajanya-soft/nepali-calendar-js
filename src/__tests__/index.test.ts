@@ -1,3 +1,4 @@
+import { InvalidDayOfMonth, InvalidMonth } from '../errors'
 import { Formatter, ILocalDate, LocalDateType, Period, Utils } from '../index'
 
 function dateDiff(first: Date, second: Date): number {
@@ -105,12 +106,34 @@ describe('ILocalDate', () => {
     expect(date.dayOfMonth).toStrictEqual(changed.dayOfMonth)
   })
 
-  test('reverse', () => {
+  test('reverse AD', () => {
     const date = ILocalDate.nowAD()
     const reversed = date.reverse().reverse()
     expect(date.year).toStrictEqual(reversed.year)
     expect(date.month).toStrictEqual(reversed.month)
     expect(date.dayOfMonth).toStrictEqual(reversed.dayOfMonth)
+  })
+
+  test('reverse BS', () => {
+    const date = ILocalDate.ofBS(2021, 1, 31)
+    const adDate = date.reverse()
+    expect(adDate.year).toStrictEqual(1964)
+    expect(adDate.monthValue).toStrictEqual(5)
+    expect(adDate.dayOfMonth).toStrictEqual(13)
+    const reversed = adDate.reverse()
+    expect(date.year).toStrictEqual(reversed.year)
+    expect(date.month).toStrictEqual(reversed.month)
+    expect(date.dayOfMonth).toStrictEqual(reversed.dayOfMonth)
+  })
+
+  test('invalid BS date', () => {
+    expect(() => {
+      ILocalDate.ofBS(2021, 1, 32)
+    }).toThrow(InvalidDayOfMonth)
+
+    expect(() => {
+      ILocalDate.ofBS(2021, 15, 31)
+    }).toThrow(InvalidMonth)
   })
 
   test(`BS Date Formatter`, () => {
