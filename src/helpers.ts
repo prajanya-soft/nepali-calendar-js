@@ -36,7 +36,7 @@ export class MonthHelper {
    */
   of(month: number): Month {
     if (month < 1 || month > 12) {
-      throw Error('Invalid value for MonthOfYear: $month')
+      throw Error(`Invalid value for MonthOfYear: ${month}`)
     }
 
     return MonthHelper.ENUMS[month - 1]
@@ -143,11 +143,9 @@ export class DayOfWeekHelper {
     // Order `daysOfWeek` array so that firstDayOfWeek is at index 0.
     // Only necessary if firstDayOfWeek != DayOfWeek.MONDAY which has ordinal 0.
     if (firstDayOfWeek != DayOfWeek.MONDAY) {
-      const lastWeekDayValue =
-        daysOfWeek.at(daysOfWeek.length - 1) ?? DayOfWeek.SATURDAY
       const rhs = daysOfWeek.slice(
         DayOfWeekHelper.ordinal(firstDayOfWeek),
-        DayOfWeekHelper.ordinal(lastWeekDayValue)
+        daysOfWeek.length
       )
       const lhs = daysOfWeek.slice(0, DayOfWeekHelper.ordinal(firstDayOfWeek))
       daysOfWeek = [...rhs, ...lhs]
