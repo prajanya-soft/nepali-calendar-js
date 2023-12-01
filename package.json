@@ -1,6 +1,6 @@
 {
   "name": "@prajanya-soft/nepali-calendar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Nepali Calendar used to manage nepali dates and also convert AD dates to nepali.",
   "keywords": [
     "nepal",
