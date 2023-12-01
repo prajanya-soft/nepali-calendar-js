@@ -138,28 +138,28 @@ describe('ILocalDate', () => {
 
   test(`BS Date Formatter`, () => {
     const date = ILocalDate.ofBS(2078, 1, 1)
-    expect(Formatter.format(date, 'd')).toStrictEqual('०१')
+    expect(Formatter.format(date, 'D')).toStrictEqual('०१')
     expect(Formatter.format(date, 'MMM')).toStrictEqual('बैशाख')
     expect(Formatter.format(date, 'MMMM')).toStrictEqual('बैशाख')
-    expect(Formatter.format(date, 'EEE')).toStrictEqual('बुध')
-    expect(Formatter.format(date, 'EEEE')).toStrictEqual('बुधबार')
-    expect(Formatter.format(date, 'yyyy-MM-dd')).toStrictEqual('२०७८-०१-०१')
+    expect(Formatter.format(date, 'ddd')).toStrictEqual('बुध')
+    expect(Formatter.format(date, 'dddd')).toStrictEqual('बुधबार')
+    expect(Formatter.format(date, 'yyyy-MM-DD')).toStrictEqual('२०७८-०१-०१')
     expect(
-      Formatter.format(date, 'yyyy-MM-dd', LocalDateType.AD)
+      Formatter.format(date, 'yyyy-MM-DD', LocalDateType.AD)
     ).toStrictEqual('2078-01-01')
   })
 
   test(`AD Date Formatter`, () => {
     const date = ILocalDate.ofAD(2021, 1, 1)
-    expect(Formatter.format(date, 'd')).toStrictEqual('01')
+    expect(Formatter.format(date, 'D')).toStrictEqual('01')
     expect(Formatter.format(date, 'MMM')).toStrictEqual('Jan')
     expect(Formatter.format(date, 'MMMM')).toStrictEqual('January')
-    expect(Formatter.format(date, 'EEE')).toStrictEqual('Fri')
-    expect(Formatter.format(date, 'EEEE')).toStrictEqual('Friday')
-    expect(Formatter.format(date, 'yyyy-MM-dd')).toStrictEqual('2021-01-01')
-    expect(Formatter.format(date, 'yyyy-M-dd')).toStrictEqual('2021-1-01')
+    expect(Formatter.format(date, 'ddd')).toStrictEqual('Fri')
+    expect(Formatter.format(date, 'dddd')).toStrictEqual('Friday')
+    expect(Formatter.format(date, 'yyyy-MM-DD')).toStrictEqual('2021-01-01')
+    expect(Formatter.format(date, 'yyyy-M-DD')).toStrictEqual('2021-1-01')
     expect(
-      Formatter.format(date, 'yyyy-MM-dd', LocalDateType.BS)
+      Formatter.format(date, 'yyyy-MM-DD', LocalDateType.BS)
     ).toStrictEqual('२०२१-०१-०१')
   })
 

@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / ADLocalDate
+[@prajanya-soft/nepali-calendar](../README.md) / ADLocalDate
 
 # Class: ADLocalDate
 
@@ -47,6 +47,7 @@
 - [copy](ADLocalDate.md#copy)
 - [equals](ADLocalDate.md#equals)
 - [firstDayOfYear](ADLocalDate.md#firstdayofyear)
+- [format](ADLocalDate.md#format)
 - [hashCode](ADLocalDate.md#hashcode)
 - [maxYear](ADLocalDate.md#maxyear)
 - [minYear](ADLocalDate.md#minyear)
@@ -97,7 +98,7 @@ ILocalDate.constructor
 
 #### Defined in
 
-[ILocalDate.ts:721](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L721)
+[src/ILocalDate.ts:816](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/ILocalDate.ts#L816)
 
 ___
 
@@ -107,7 +108,7 @@ ___
 
 #### Defined in
 
-[ILocalDate.ts:737](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L737)
+[src/ILocalDate.ts:832](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/ILocalDate.ts#L832)
 
 ## Accessors
 
@@ -460,6 +461,27 @@ ___
 #### Overrides
 
 ILocalDate.firstDayOfYear
+
+___
+
+### format
+
+▸ **format**(`pattern`, `type?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pattern` | `string` |
+| `type?` | [`LocalDateType`](../enums/LocalDateType.md) |
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[ILocalDate](ILocalDate.md).[format](ILocalDate.md#format)
 
 ___
 

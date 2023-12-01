@@ -1,6 +1,6 @@
-nepali-calendar-js
+@prajanya-soft/nepali-calendar
 
-# nepali-calendar-js
+# @prajanya-soft/nepali-calendar
 
 ## Table of contents
 
@@ -17,6 +17,8 @@ nepali-calendar-js
 - [DayOfWeekHelper](classes/DayOfWeekHelper.md)
 - [Formatter](classes/Formatter.md)
 - [ILocalDate](classes/ILocalDate.md)
+- [InvalidDayOfMonth](classes/InvalidDayOfMonth.md)
+- [InvalidMonth](classes/InvalidMonth.md)
 - [MathHelper](classes/MathHelper.md)
 - [MonthHelper](classes/MonthHelper.md)
 - [Period](classes/Period.md)

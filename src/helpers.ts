@@ -222,8 +222,8 @@ export class DayOfWeekHelper {
   static weekName(
     dayOfWeek: DayOfWeek,
     type: LocalDateType = LocalDateType.BS,
-    short = true
+    shortTo?: number
   ): string {
-    return Formatter.weekDayName(dayOfWeek, type, short)
+    return Formatter.weekDayName(dayOfWeek, type, shortTo)
   }
 }

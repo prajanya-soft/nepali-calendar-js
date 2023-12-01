@@ -626,18 +626,50 @@ export abstract class ILocalDate {
       : ILocalDate.ofAD(year, month, dayOfMonth)
   }
 
+  /**
+   * Obtains an Bikaram Sambat(BS) instance of {@code ILocalDate} from a year, month and day.
+   * <p>
+   * This returns a {@code ILocalDate} with the specified year, month and day-of-month.
+   * The day must be valid for the year and month, otherwise an exception will be thrown.
+   *
+   * @param year  the year to represent, from MIN_YEAR to MAX_YEAR
+   * @param month  the month-of-year to represent, from 1 (January) to 12 (December)
+   * @param dayOfMonth  the day-of-month to represent, from 1 to 31
+   * @return the local date, not null
+   */
   static ofBS(year: number, month = 1, dayOfMonth = 1): ILocalDate {
     Utils.validateDate(year, month, dayOfMonth, LocalDateType.BS)
 
     return new BSLocalDate(year, MonthHelper.valueOf(month), dayOfMonth)
   }
 
+  /**
+   * Obtains an Anno Domini(AD) instance of {@code ILocalDate} from a year, month and day.
+   * <p>
+   * This returns a {@code ILocalDate} with the specified year, month and day-of-month.
+   * The day must be valid for the year and month, otherwise an exception will be thrown.
+   *
+   * @param year  the year to represent, from MIN_YEAR to MAX_YEAR
+   * @param month  the month-of-year to represent, from 1 (January) to 12 (December)
+   * @param dayOfMonth  the day-of-month to represent, from 1 to 31
+   * @return the local date, not null
+   */
   static ofAD(year: number, month = 1, dayOfMonth = 1): ILocalDate {
     Utils.validateDate(year, month, dayOfMonth, LocalDateType.AD)
 
     return new ADLocalDate(year, MonthHelper.valueOf(month), dayOfMonth)
   }
 
+  /**
+   * Obtains an instance of {@code ILocalDate} from a year, month, day and type {@code LocalDateType}.
+   * <p>
+   * This returns a {@code ILocalDate} with the specified year, month and day-of-month.
+   * The day must be valid for the year and month, otherwise an exception will be thrown.
+   *
+   * @param calendar the date to represent, javascript date class
+   * @param type the type of calendar to represent by AD or BS
+   * @return the local date, not null
+   */
   static ofDate(
     calendar: Date,
     type: LocalDateType = LocalDateType.AD
@@ -654,6 +686,48 @@ export abstract class ILocalDate {
     }
   }
 
+  /**
+   * Obtains a formatted value from {@code ILocalDate} using provided patterns.
+   * <p>
+   * This returns a formatted string with the specified date patterns.
+   *
+   * For Example:
+   * When pattern is 'yyyy-MM-dd' and type is 'LocalDateType.BS' of date object
+   * const date = ILocalDate.ofBS(2078, 1, 1)
+   * Then result string would be '२०७८-०१-०१'
+   *
+   * same as
+   *
+   * When pattern is 'yyyy-MM-dd' and type is 'LocalDateType.AD' of date object
+   * const date = ILocalDate.ofAD(2021, 1, 1)
+   * Then result string would be '2021-01-01'
+   *
+   * Month M     1 2 ... 11 12                           or १ २ ... ११ १२
+   *       MM    01 02 ... 11 12                         or ०१ ०२ ... ११ १२
+   *       MMM   Jan Feb ... Nov Dec                     or बैशाख जेठ ... फाल्गुन चैत्र
+   *       MMMM  January February ... November December  or बैशाख जेठ ... फाल्गुन चैत्र
+   *
+   * Day of Month
+   *       D     1 2 ... 30 31                           or १ २ ... ३१ ३२
+   *       DD    01 02 ... 30 31                         or ०१ ०२ ... ३१ ३२
+   *
+   * Day of Week
+   *       dd    Su Mo ... Sa                            or आइ सोम ... शनि
+   *       ddd   Sun Mon ... Sat                         or आइ सोम ... शनि
+   *       dddd  Sunday Monday ... Sataurday             or आइतबार सोमबार ... शनिबार
+   *
+   * Day of Week(ISO)
+   *       E     1 2 ... 7                               or १ २ ... ७
+   *
+   * Year
+   *       YYYY  2001 2002 ... 2152                      or २०५८ २०५९ ... २२०८
+   *
+   * The pattern mappings would be
+   *
+   * @param pattern the pattern to represent, format type
+   * @param type the type of calendar to represent by AD or BS
+   * @return the string date, not null
+   */
   format(pattern: string, type?: LocalDateType): string {
     return Formatter.format(this, pattern, type ?? this.type)
   }

@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / DayOfWeek
+[@prajanya-soft/nepali-calendar](../README.md) / DayOfWeek
 
 # Enumeration: DayOfWeek
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[DayOfWeek.ts:30](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L30)
+[src/DayOfWeek.ts:30](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L30)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:6](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L6)
+[src/DayOfWeek.ts:6](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L6)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:36](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L36)
+[src/DayOfWeek.ts:36](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L36)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:42](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L42)
+[src/DayOfWeek.ts:42](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L42)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:24](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L24)
+[src/DayOfWeek.ts:24](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:12](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L12)
+[src/DayOfWeek.ts:12](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L12)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-[DayOfWeek.ts:18](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/DayOfWeek.ts#L18)
+[src/DayOfWeek.ts:18](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/DayOfWeek.ts#L18)

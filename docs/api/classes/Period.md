@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / Period
+[@prajanya-soft/nepali-calendar](../README.md) / Period
 
 # Class: Period
 

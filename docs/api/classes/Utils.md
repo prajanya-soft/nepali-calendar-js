@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / Utils
+[@prajanya-soft/nepali-calendar](../README.md) / Utils
 
 # Class: Utils
 
@@ -15,6 +15,7 @@
 - [lengthOfYear](Utils.md#lengthofyear)
 - [monthDaysAD](Utils.md#monthdaysad)
 - [monthDaysBS](Utils.md#monthdaysbs)
+- [validateDate](Utils.md#validatedate)
 
 ## Constructors
 
@@ -99,3 +100,22 @@ ___
 #### Returns
 
 `number`[]
+
+___
+
+### validateDate
+
+▸ `Static` **validateDate**(`year`, `month`, `dayOfMonth`, `type`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `year` | `number` |
+| `month` | [`Month`](../enums/Month.md) |
+| `dayOfMonth` | `number` |
+| `type` | [`LocalDateType`](../enums/LocalDateType.md) |
+
+#### Returns
+
+`void`

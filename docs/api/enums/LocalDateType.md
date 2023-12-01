@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / LocalDateType
+[@prajanya-soft/nepali-calendar](../README.md) / LocalDateType
 
 # Enumeration: LocalDateType
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types.ts:2](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/types.ts#L2)
+[src/types.ts:2](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/types.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types.ts:3](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/types.ts#L3)
+[src/types.ts:3](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/types.ts#L3)

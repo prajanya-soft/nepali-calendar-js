@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / Month
+[@prajanya-soft/nepali-calendar](../README.md) / Month
 
 # Enumeration: Month
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[Month.ts:27](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L27)
+[src/Month.ts:27](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L27)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[Month.ts:51](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L51)
+[src/Month.ts:51](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L51)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[Month.ts:75](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L75)
+[src/Month.ts:75](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L75)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[Month.ts:15](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L15)
+[src/Month.ts:15](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L15)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[Month.ts:9](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L9)
+[src/Month.ts:9](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L9)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[Month.ts:45](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L45)
+[src/Month.ts:45](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L45)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[Month.ts:39](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L39)
+[src/Month.ts:39](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L39)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[Month.ts:21](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L21)
+[src/Month.ts:21](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L21)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[Month.ts:33](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L33)
+[src/Month.ts:33](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L33)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[Month.ts:69](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L69)
+[src/Month.ts:69](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L69)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[Month.ts:63](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L63)
+[src/Month.ts:63](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L63)
 
 ___
 
@@ -137,4 +137,4 @@ ___
 
 #### Defined in
 
-[Month.ts:57](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/Month.ts#L57)
+[src/Month.ts:57](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/Month.ts#L57)

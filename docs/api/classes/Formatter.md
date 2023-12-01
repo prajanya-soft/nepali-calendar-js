@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / Formatter
+[@prajanya-soft/nepali-calendar](../README.md) / Formatter
 
 # Class: Formatter
 
@@ -80,14 +80,15 @@ ___
 
 ### monthCharacter
 
-▸ `Static` **monthCharacter**(`month`, `type`): `string`
+▸ `Static` **monthCharacter**(`month`, `type`, `short?`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `month` | [`Month`](../enums/Month.md) |
-| `type` | [`LocalDateType`](../enums/LocalDateType.md) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `month` | [`Month`](../enums/Month.md) | `undefined` |
+| `type` | [`LocalDateType`](../enums/LocalDateType.md) | `undefined` |
+| `short` | `boolean` | `false` |
 
 #### Returns
 
@@ -115,15 +116,15 @@ ___
 
 ### weekDayName
 
-▸ `Static` **weekDayName**(`dayOfWeek`, `type`, `short?`): `string`
+▸ `Static` **weekDayName**(`dayOfWeek`, `type`, `shortTo?`): `string`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `dayOfWeek` | [`DayOfWeek`](../enums/DayOfWeek.md) | `undefined` |
-| `type` | [`LocalDateType`](../enums/LocalDateType.md) | `undefined` |
-| `short` | `boolean` | `true` |
+| Name | Type |
+| :------ | :------ |
+| `dayOfWeek` | [`DayOfWeek`](../enums/DayOfWeek.md) |
+| `type` | [`LocalDateType`](../enums/LocalDateType.md) |
+| `shortTo?` | `number` |
 
 #### Returns
 

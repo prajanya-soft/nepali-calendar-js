@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / MonthHelper
+[@prajanya-soft/nepali-calendar](../README.md) / MonthHelper
 
 # Class: MonthHelper
 

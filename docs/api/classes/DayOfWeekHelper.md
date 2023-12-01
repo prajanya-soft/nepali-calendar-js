@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / DayOfWeekHelper
+[@prajanya-soft/nepali-calendar](../README.md) / DayOfWeekHelper
 
 # Class: DayOfWeekHelper
 
@@ -126,7 +126,7 @@ ___
 
 ### weekName
 
-▸ `Static` **weekName**(`dayOfWeek`, `type?`, `short?`): `string`
+▸ `Static` **weekName**(`dayOfWeek`, `type?`, `shortTo?`): `string`
 
 #### Parameters
 
@@ -134,7 +134,7 @@ ___
 | :------ | :------ | :------ |
 | `dayOfWeek` | [`DayOfWeek`](../enums/DayOfWeek.md) | `undefined` |
 | `type` | [`LocalDateType`](../enums/LocalDateType.md) | `LocalDateType.BS` |
-| `short` | `boolean` | `true` |
+| `shortTo?` | `number` | `undefined` |
 
 #### Returns
 

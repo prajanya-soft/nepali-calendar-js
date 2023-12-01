@@ -1,4 +1,4 @@
-[nepali-calendar-js](../README.md) / ILocalDate
+[@prajanya-soft/nepali-calendar](../README.md) / ILocalDate
 
 # Class: ILocalDate
 
@@ -42,6 +42,7 @@
 - [compareTo](ILocalDate.md#compareto)
 - [copy](ILocalDate.md#copy)
 - [equals](ILocalDate.md#equals)
+- [format](ILocalDate.md#format)
 - [hashCode](ILocalDate.md#hashcode)
 - [minusDays](ILocalDate.md#minusdays)
 - [minusMonths](ILocalDate.md#minusmonths)
@@ -70,7 +71,7 @@
 
 #### Defined in
 
-[ILocalDate.ts:39](https://github.com/prajanya-tech/nepali-calendar-js/blob/6af0828/src/ILocalDate.ts#L39)
+[src/ILocalDate.ts:39](https://github.com/prajanya-soft/nepali-calendar-js/blob/a2c1c38/src/ILocalDate.ts#L39)
 
 ## Accessors
 
@@ -311,6 +312,23 @@ ___
 #### Returns
 
 `boolean`
+
+___
+
+### format
+
+▸ **format**(`pattern`, `type?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pattern` | `string` |
+| `type?` | [`LocalDateType`](../enums/LocalDateType.md) |
+
+#### Returns
+
+`string`
 
 ___
 

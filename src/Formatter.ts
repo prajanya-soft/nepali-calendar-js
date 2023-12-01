@@ -2,6 +2,7 @@ import { DayOfWeek } from './DayOfWeek'
 import { Month } from './Month'
 import type { ILocalDate } from './ILocalDate'
 import { LocalDateType } from './types'
+import { DayOfWeekHelper } from './helpers'
 
 class Formatter {
   private static npNumberChars: Record<number, string> = {
@@ -104,7 +105,7 @@ class Formatter {
   static weekDayName(
     dayOfWeek: DayOfWeek,
     type: LocalDateType,
-    short = true
+    shortTo?: number
   ): string {
     let name
 
@@ -115,7 +116,7 @@ class Formatter {
       name = name.substring(0, 1).toUpperCase() + name.substring(1, name.length)
     }
 
-    return short ? name.substring(0, 3) : name
+    return shortTo ? name.substring(0, shortTo) : name
   }
 
   static getNpCharacter(number: number, prefix = ''): string {
@@ -150,7 +151,7 @@ class Formatter {
     type?: LocalDateType
   ): string {
     return pattern.replace(
-      /YYYY|yyyy|MMMM|MMM|MM|M|EEEE|EEE|dd|d|hh|HH|mm|ss|a/g,
+      /YYYY|yyyy|MMMM|MMM|MM|M|E|DD|D|dddd|ddd|ddd|hh|HH|mm|ss|a/g,
       (matched) => {
         const formatType = type ?? date.type
         switch (matched) {
@@ -165,13 +166,17 @@ class Formatter {
             return Formatter.monthCharacter(date.month, formatType)
           case 'M':
             return Formatter.monthCharacter(date.month, formatType, true)
-          case 'EEEE':
-            return Formatter.weekDayName(date.dayOfWeek, formatType, false)
-          case 'EEE':
-            return Formatter.weekDayName(date.dayOfWeek, formatType, true)
+          case 'dddd':
+            return Formatter.weekDayName(date.dayOfWeek, formatType)
+          case 'ddd':
+            return Formatter.weekDayName(date.dayOfWeek, formatType, 3)
           case 'dd':
+            return Formatter.weekDayName(date.dayOfWeek, formatType, 2)
+          case 'E':
+            return DayOfWeekHelper.ordinal(date.dayOfWeek).toString()
+          case 'DD':
             return Formatter.dayName(date.dayOfMonth, formatType)
-          case 'd':
+          case 'D':
             return Formatter.dayName(date.dayOfMonth, formatType)
           default:
             return ''
